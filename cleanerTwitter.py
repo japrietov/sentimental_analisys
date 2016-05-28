@@ -23,7 +23,7 @@ myfunc = STAP(string, "lematizador")
 data_twitter = []
 clean_data_text = []
 
-with open('output_got.csv', 'r') as csvfile:
+with open('output_test.csv', 'r') as csvfile:
     spamreader = csv.reader(csvfile, delimiter=';')
     for i in spamreader:
         data_twitter.append(i)
@@ -31,8 +31,13 @@ with open('output_got.csv', 'r') as csvfile:
 for data in data_twitter:
     clean_data_text.append(data[4].encode("utf-8"))
 
-
 data_analisys = []
+
+positive = open("positive_words_cleaned.txt")
+positive_list = set(positive.read().split())
+
+negative = open("negative_words_cleaned.txt")
+negative_list = set(negative.read().split())
 
 
 for row in clean_data_text:
@@ -41,25 +46,20 @@ for row in clean_data_text:
 
     data = row
 
-
     # Save all information in a list, for saving in a .json file
-    # clean_data_twitter.append(clean_file)
-
 
     # lematizado de las palabras.
-
-
     important_word = []
     for word in data.split():
         if word not in stopwords.words('spanish') and word not in list("áéíóúüabcdefghijklmnopqrstuvwxyz") \
                 and not word.isdigit() and not urlparse(word).scheme and "pic.twitter" not in word:
             important_word.append(word)
 
-    data = " ".join(important_word)
+    #data = " ".join(important_word)
 
     lematizada = []
     changeWord = []
-    for i in data.split():
+    for i in important_word:
         if "@" in i:
             continue
         else:
@@ -84,6 +84,15 @@ for row in clean_data_text:
         tmp.append(changeWord[item])
         tmp.append(',')
 
+
+    tmp = data.split()
+
+    for emotion_positive in positive_list:
+        for value in tmp:
+            if emotion_positive in value:
+
+
+
 #    tmp.pop()
     """
     tmp = " ".join(tmp)
@@ -94,14 +103,9 @@ for row in clean_data_text:
     #data_analisys.append(" ".join(data_list))
     print(" ".join(tmp))
 
+
+
 #print(data_analisys)
-
-"""
-positive = open("pspa.txt")
-positive_list = set(positive.read().split())
-
-negative = open("nspa.txt")
-negative_list = set(negative.read().split())
 
 data_positive_negative = {}
 for data_key in data_analisys:
@@ -119,4 +123,3 @@ for k in data_positive_negative:
 # Save .jason file
 # with open('cleaned_twitter.json', 'w') as f:
 #   json.dump(clean_data_twitter, f)
-"""

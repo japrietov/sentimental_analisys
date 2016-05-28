@@ -1,3 +1,5 @@
+Loading required package: fastmatch
+Loading required package: XML
 voluble
 vomitar
 asombro
@@ -64,7 +66,6 @@ ficticio
 calesa
 licencioso
 indiscriminado
-sobre
 travestir
 enérgico
 arpía
@@ -82,14 +83,13 @@ bullyingly
 severidad
 detraer
 frenético
-k
 espeluznar
 críticas
 disgustar
 pusilánimes
 astuto
 instinto
-amargura
+anular
 escépticamente
 histérico
 lamentar
@@ -371,7 +371,6 @@ beligerancia
 drásticamente
 despectivo
 llamar
-toil
 negligencia
 inconexo
 embate
@@ -487,7 +486,6 @@ empeñado
 gainsayer
 infundado
 inadaptado
-con
 irritar
 calumnioso
 epidemia
@@ -495,7 +493,6 @@ expoliador
 acoger
 agotar
 -terror
-Traped
 Mudslinger
 veneno
 unlamentably
@@ -574,7 +571,6 @@ inmoralidad
 disculpar
 fracturar
 insustancial
-anular
 overzealously
 límites
 decrepitud
@@ -693,7 +689,6 @@ enfáticamente
 incivilidad
 pérdida
 implicar
-algo
 -uso
 deploringly
 lavar
@@ -740,7 +735,6 @@ descomunal
 propaganda
 traumáticamente
 inquietante
-sacudir
 división
 condenar
 desviar
@@ -757,7 +751,6 @@ no
 irrazonable
 arrogante
 controversia
-malgastar
 maledict
 detrimento
 Fleed
@@ -822,7 +815,7 @@ lacónico
 irrisorio
 vehemente
 pillaje
-me
+Traped
 fealdad
 sofocar
 alcornoque
@@ -891,7 +884,6 @@ apresurar
 ingratitud
 azucarar
 eclipsar
-brotar
 sobrevalorar
 penetrar
 ostentar
@@ -1005,7 +997,6 @@ truco
 sh
 holgazanear
 dilema
-se
 engreído
 monstruo
 forastero
@@ -1049,16 +1040,15 @@ insidioso
 desaconsejable
 revocar
 citar
-el
 expurgar
-en
+génica
 nettlesome
 maleducar
 chocó
 hechizar
 tiranía
 busto
-génica
+giro
 hiliarious
 escándalo
 chupar
@@ -1103,7 +1093,6 @@ aleccionador
 escándalos
 deficiente
 infestar
-mucho
 autocrático
 desventaja
 profanar
@@ -1125,7 +1114,7 @@ interés
 bobo
 tensión
 ralentizar
-sentir
+malgastar
 obstáculo
 desequilibrio
 cerebro
@@ -1218,6 +1207,7 @@ letárgico
 contratiempo
 increíble
 arenoso
+ser
 cautelar
 cansar
 exiliar
@@ -1259,7 +1249,7 @@ herbar
 disimulador
 vanidad
 torpe
-estar
+suspicaz
 llorar
 exasperantemente
 ineloquently
@@ -1290,7 +1280,6 @@ jitter
 crujir
 ruido
 perdición
-por
 inexplicable
 opresor
 engañar
@@ -1424,7 +1413,6 @@ dishonorablely
 esperanzar
 antagónico
 disoobedient
-suspicaz
 atractivo
 innoble
 pronunciar
@@ -1500,7 +1488,6 @@ puré
 monstruosidad
 inaceptable
 cebar
-los
 firmar
 satisfactorio
 satírico
@@ -1751,7 +1738,6 @@ ladrones
 plano
 beligerante
 inequitativamente
-a
 frenesí
 vestigio
 injustificado
@@ -1816,7 +1802,6 @@ disminución
 contencioso
 inicuo
 hostilidad
-más
 traición
 discutidor
 debacle
@@ -1889,7 +1874,7 @@ desvalido
 gruñón
 unusably
 friccionar
-luchar
+grima
 fatuo
 confrontacional
 execrar
@@ -1897,7 +1882,7 @@ traumático
 manosear
 aborrecedor
 fatcats
-grima
+luchar
 contra
 lascivia
 carente
@@ -1917,7 +1902,6 @@ afligir
 insatisfacción
 imaginario
 recalcitrar
-inaguantable
 inflamatorio
 travieso
 intolerancia
@@ -2025,7 +2009,7 @@ obstáculos
 juzgar
 esencial
 imprecisión
-ser
+sacudir
 impersonal
 insano
 grumpiest
@@ -2039,12 +2023,10 @@ febril
 discriminar
 piso
 quarrellous
-húmedo
 dominar
 confianza
 equívoco
 desaprensivo
-muy
 parásito
 ofender
 flojo
@@ -2153,7 +2135,7 @@ rehén
 mendigar
 quejar
 estofar
-y
+toil
 halcones
 decepcionantemente
 competitivo
@@ -2192,7 +2174,7 @@ scoldingly
 estridente
 ineficacia
 desafortunado
-d
+brotar
 fangoso
 dolían
 amenazador
@@ -2224,7 +2206,7 @@ escondían
 conspirar
 manipulador
 eliminar
-t
+inaguantable
 granoso
 regañado
 tartamudeó
@@ -2286,7 +2268,6 @@ inhumano
 agonía
 bullicioso
 agudísimo
-un
 síndrome
 gustó
 enfermizo
@@ -2473,7 +2454,6 @@ debaucher
 abortar
 conscons
 wripped
-f
 hardball
 excentricidad
 unspeakablely
@@ -2506,7 +2486,6 @@ imprecisiones
 servilismo
 piquete
 agónicamente
-sin
 demoledor
 cliched
 insólito
@@ -2601,7 +2580,7 @@ conflicto
 represivo
 despedir
 unipolar
-que
+amargura
 adulterier
 diabólico
 inmaterial
@@ -2614,7 +2593,6 @@ ilegítimo
 mendacidad
 bicho
 hegemonismo
-desde
 alarmante
 insensible
 mortal
@@ -2910,7 +2888,7 @@ miserableness
 contradicción
 antipatía
 desafecto
-nadar
+húmedo
 humilde
 sombrear
 ebullición
@@ -3045,7 +3023,6 @@ invadir
 moraleja
 aguijón
 infamia
-giro
 unwatchable
 horrorizar
 marear
