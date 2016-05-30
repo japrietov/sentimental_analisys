@@ -1,12 +1,50 @@
 # -*- coding: utf-8 -*-
+import codecs
+
 __author__ = 'japrietov'
 
 import re
-
 import sys  # sys.setdefaultencoding is cancelled by site.py
+import csv
 from nltk.corpus import stopwords
-reload(sys)  # to re-enable sys.setdefaultencoding()
-sys.setdefaultencoding("utf-8")
+"""
+for data in data_twitter:
+    clean_data_text.append(data[4].encode("utf-8"))
+
+
+negative = open("negative_words_cleaned.txt")
+negative_list = negative.readlines()
+
+from itertools import izip_longest
+
+positive = open("positive_words_cleaned.txt")
+positive_list = positive.readlines()
+
+positive_dict = {}
+negative_dict = {}
+
+for j in positive_list:
+    tmp = j.split()
+    positive_dict[tmp[0]] = int(tmp[1])
+
+
+for j in negative_list:
+    tmp = j.split()
+    print(tmp)
+    negative_dict[tmp[0].strip()] = int(tmp[1])
+
+
+print(negative_dict)
+print(len(negative_list))
+
+
+
+
+
+data = "@HSBnoticias @Prensa_Alcaldia @EnriquePenalosa esto no era lo que uds llamaban \"populismo\". A partir de hoy se llama Institucionalidad."
+
+
+positive_sentiments = 0
 
 # lematizador R
 from rpy2.robjects.packages import SignatureTranslatedAnonymousPackage
@@ -19,37 +57,77 @@ with open('lematizador.r', 'r') as f:
 myfunc = STAP(string, "lematizador")
 
 
-def cleaned_emotions(emotions):
-    cleaned = set()
+lematizada = []
+for i in data.split():
+    if "@" in i or i in stopwords.words('spanish'):
+        continue
+    else:
+        asd = str(myfunc.lematizador(i)[0])
+        if asd == 'NA':
+            lematizada.append(i)
+        else:
+            lematizada.append(asd)
 
-    for i in emotions:
-        if i not in stopwords.words('spanish') and i not in list("áéíóúüabcdefghijklmnopqrstuvwxyz"):
-            emotion_cleaned = str(myfunc.lematizador(i)[0])
-            if emotion_cleaned == 'NA':
-                cleaned.add(i)
-            else:
-                cleaned.add(emotion_cleaned)
+data = " ".join(lematizada)
+data = (re.sub(u'[^\wáéíóúñ#@\n\t\s((:][=/*>-}{|ü]', '', u''+data))
+data = data.replace('¿', '')
+data = data.replace('?', '')
+data = data.replace('\'', '')
 
-    return cleaned
+tmp = data.split()
 
-negative = open("nspa.txt")
-negative_list = negative.read().strip().split()
+for emotion_positive in positive_list:
+    for value in tmp:
+        if value in emotion_positive:
+            print (value, emotion_positive)
+            positive_sentiments +=1
 
-tmp = cleaned_emotions(negative_list)
+print(tmp)
+print(positive_sentiments)
 
-for i in tmp:
-    print(i)
 
-"""
-negative = open("pspa.txt")
-negative_list = set(negative.read().strip().split())
+data = "@GustavoBolivar @freito Y despuÈs dir·n que todo es obra del gran urbanista @EnriquePenalosa. Gran prensa. @ELROLODELA14 @EnriquePenalosa Se nota que ni siquiera pasÛ la primaria. QuÈ verg¸enza expresarse asÌ. Pobre diablo."
 
-from itertools import izip_longest
+stopwords_words = [x.encode('utf-8') for x in stopwords.words('spanish')]
+
+
+chars = "áéíóúüÑñÁÉÍÓÚÜabcdefghijklmnopqrstuvwxyz"
+rare_chars = "ÁÉÍÓÚÜÑ"
+
+list_chars = list(chars) + list(chars.upper())
+
+print(stopwords_words)
+
+for i in data.split():
+    if not i.isupper():
+        i = i.decode('utf-8').lower()
+    if i not in stopwords_words and i not in list_chars:
+        print (i)
+
+
+
+negative = open("negative_words_cleaned.txt")
+negative_list = negative.readlines()
 
 positive = open("positive_words_cleaned.txt")
-positive_list = set(positive.read().split())
+positive_list = positive.readlines()
 
-for emotion_negative, emotion_positive in izip_longest(negative_list, positive_list):
-    print(emotion_negative, emotion_positive)
+positive_dict = {}
+negative_dict = {}
+
+for j in positive_list:
+    tmp = j.split()
+    print(tmp)
+    positive_dict[tmp[0]] = int(tmp[1])
+
+
+for j in negative_list:
+    tmp = j.split()
+    print(tmp)
+    negative_dict[tmp[0].strip()] = int(tmp[1])
+
 """
 
+string1 = "calvin klein design dress calvin klein"
+words = string1.split()
+print " ".join(sorted(set(words), key=words.index))
